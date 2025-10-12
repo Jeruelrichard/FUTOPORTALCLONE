@@ -1,0 +1,405 @@
+:root {
+  --special-color: rgba(71, 86, 112)
+}
+
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow:-5px 0 5px rgba(0, 0, 0, 0.25);
+}
+
+header .logo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header .logo img {
+  height: 45px;
+  width: auto;
+  margin: 10px 0 10px 0;
+}
+
+header .logo p {
+  color: var(--special-color);
+  font-size: 15px;
+  font-weight: bold;
+  width: 170px;
+  margin: 15px 0 0 5px;
+}
+
+.links-container {
+  display: none;
+  height: 100%;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 250px;
+  background-color: white;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-logo svg{
+  margin: 20px 0 0 0;
+}
+
+.nav-logo img{
+  height: 50px;
+  margin: 10px 0 0 0 ;
+}
+
+.nav-logo p {
+  color: var(--special-color);
+  margin: 10px 0 0 5px;
+  font-size: 12px;
+  font-weight: bold;
+  align-self: center;
+}
+
+#mod {
+  color: var(--special-color);
+  margin: 40px 0 -10px 20px;
+}
+
+.nav-items a {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--special-color);
+  box-sizing: border-box;
+  cursor: button;
+  padding: 5px;
+  width: 80%;
+  margin: 30px 10px 0 30px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.nav-items a:hover {
+  background-color: rgb(247, 248, 250)
+}
+
+#Dashboard {
+  font-weight: bold;
+  color: green;
+  background: rgb(247, 248, 250);
+}
+
+nav svg {
+  fill: black;
+}
+
+#sidebar-active {
+  display: none;
+}
+
+#overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+      z-index: 10;
+      cursor: pointer;
+    }
+    
+#sidebar-active:checked ~ .links-container {
+    display: flex;
+    left: 0;
+  }
+  
+#sidebar-active:checked ~ #overlay {
+    display: block;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+  padding:0 20px;
+  display:block;
+}
+
+.partwo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.partwo p {
+  margin-left: 30px;
+  color: var(--special-color);
+  font-size: 20px;
+}
+
+.picicon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 40px;
+  width: 20%;
+}
+
+.picicon i {
+  background-color: rgba(222, 235, 234);
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.partwo img{
+  height: 50px;
+  border-radius: 50%;
+}
+
+main {
+  margin-top: 0;
+  background: rgb(250, 251, 253);
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.proinfo {
+  display: flex;
+  box-sizing: border-box;
+  background-color: white;
+  flex-direction: column;
+  height: 100vh;
+  width: 15vh;
+}
+
+.proinfoA {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  color: var(--special-color);
+  font-weight: bold;
+}
+
+.proinfoA img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.proinfoA h2 {
+  margin-top: 10px;
+}
+
+.proinfoA p {
+  font-weight: lighter;
+  margin-top: -20px;
+}
+
+.proinfoA button {
+  margin-top: 40px;
+  background: rgba(222,235,234);
+  border: none;
+  padding: 10px 30px 10px 30px;
+  color: var(--special-color);
+  font-weight: bold;
+}
+
+#dash {
+  background: rgba(222,235,234);
+  width: 80%;
+  height: 1px;
+  align-self: center;
+  margin-top: 50px;
+}
+
+.proinfoB {
+  margin: 50px 10px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.proinfoB h4{
+  color: gray;
+}
+
+.proinfoB p {
+  color: var(--special-color);
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.hero {
+  margin: 150px 50px auto 20px;
+}
+
+.hero #persona {
+  padding: 8px;
+  color: black;
+  font-weight: bold;
+  border: none;
+}
+
+.hero .feedback {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgb(222,235,254);
+  margin-top: 30px;
+}
+
+.hero #fbContent {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  min-height: 100px;
+}
+
+.hero #fbContent i {
+  color: rgb(7,72,165);
+  margin-left: -15px;
+}
+
+.hero #fbContent h3 {
+  font-weight: bold;
+  margin: 0;
+  color: rgb(23,43,76);
+}
+
+.hero #fbContent a {
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(3,83,202);
+}
+
+.card-container {
+  border: 1px solid black;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 170px;
+}
+
+.card-container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgb(222,235,254);
+  width: 100%;
+  font-size: 17px;
+}
+
+.card-container .card i, h4, p {
+  margin-left: 10px;
+}
+
+#card1 {
+  background: rgb(231,252,255);
+}
+
+#card2 {
+  background: rgb(171,245,208);
+}
+
+
+@media (max-width: 767px) {
+.links-container {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vh;
+  background-color: white;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.25);
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-logo svg{
+  height: 20px;
+  margin: 20px 0 30px 0;
+}
+
+.nav-logo img{
+  height: 80px;
+  margin: 10px 0 0 0 ;
+}
+
+.nav-logo p {
+  color: var(--special-color);
+  margin: -10px 0 0 5px;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: left;
+  align-content: center;
+  width: 200px;
+  height: 70px;
+}
+  
+#mod {
+  color: var(--special-color);
+  margin: 20px 0 10px 20px;
+}
+
+.nav-items a {
+  width: 40%;
+  margin: 25px 10px 0 30px;
+  padding: 12px;
+  font-size: 12px;
+  justify-content: flex-start;
+}
+      
+.open-sidebar-button, .close-sidebar-button {
+    padding: 20px;
+    display: block;
+  }
+  
+#sidebar-active:checked ~ .links-container {
+    display: flex;
+    left: 0;
+  }
+  
+#sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+header .logo p{
+  font-size: 10px;
+  align-self: center;
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.partwo p {
+  font-size: 13px;
+  align-self: center;
+}
+}
