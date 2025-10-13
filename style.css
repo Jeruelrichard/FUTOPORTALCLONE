@@ -1,5 +1,33 @@
 :root {
-  --special-color: rgba(71, 86, 112)
+  --special-color: rgba(71, 86, 112);
+  --hover-color: rgb(247, 248, 250);
+  --svg-color: black;
+  --third-color: rgba(222, 235, 254);
+  --bg-color: rgb(250, 251, 253);
+  --white-color: white;
+  --gray-color: gray;
+  --text-color: black;
+  --box-shadow: rgba(0, 0, 0, 0.25);
+  --card1: rgb(231, 252, 255);
+  --card2: rgb(171, 245, 208);
+  --h3-color: rgb(23, 43, 76);
+  --link-color: rgb(3, 83, 202);
+}
+
+.darkmode {
+  --special-color: rgba(155, 175, 210);
+  --hover-color: rgb(24, 25, 28);
+  --svg-color: white;
+  --third-color: rgba(42, 58, 80);
+  --bg-color: rgb(18, 19, 21);
+  --white-color: black;
+  --gray-color: silver;
+  --text-color: white;
+  --box-shadow: rgba(255, 255, 255, 0.25);
+  --card1: rgb(20, 45, 50);
+  --card2: rgb(20, 60, 45);
+  --h3-color: rgb(140, 165, 210);
+  --link-color: rgb(80, 140, 255);
 }
 
 header {
@@ -8,13 +36,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  box-shadow:-5px 0 5px rgba(0, 0, 0, 0.25);
+  background: var(--white-color);
+  box-shadow:-5px 0 5px var(--box-shadow);
+  width: 100%;
 }
 
 header .logo {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  margin-left: -120px;
 }
 
 header .logo img {
@@ -44,8 +74,9 @@ header .logo p {
   left: 0;
   z-index: 10;
   width: 250px;
-  background-color: white;
-  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.25);
+  background-color: var(--white-color);
+  box-shadow: 5px 0 5px var(--box-shadow);
+  overflow-y: auto;
 }
 
 .nav-logo {
@@ -92,17 +123,17 @@ header .logo p {
 }
 
 .nav-items a:hover {
-  background-color: rgb(247, 248, 250)
+  background-color: var(--hover-color);
 }
 
 #Dashboard {
   font-weight: bold;
   color: green;
-  background: rgb(247, 248, 250);
+  background: var(--hover-color);
 }
 
 nav svg {
-  fill: black;
+  fill: var(--svg-color);
 }
 
 #sidebar-active {
@@ -116,7 +147,7 @@ nav svg {
       left: 0;
       width: 100vw;
       height: 100vh;
-      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+      background-color: var(--box-shadow); /* Semi-transparent black overlay */
       z-index: 10;
       cursor: pointer;
     }
@@ -152,12 +183,36 @@ nav svg {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-right: 40px;
+  margin-right: 20px;
   width: 20%;
 }
 
+.picicon #theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+#theme-switch i:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch i:first-child {
+  display: none;
+}
+
+.darkmode #theme-switch i:last-child {
+  display: block;
+}
+
 .picicon i {
-  background-color: rgba(222, 235, 234);
+  background-color: var(--third-color);
   border-radius: 50%;
   padding: 15px;
 }
@@ -169,7 +224,7 @@ nav svg {
 
 main {
   margin-top: 0;
-  background: rgb(250, 251, 253);
+  background: var(--bg-color);
   display: flex;
   justify-content: space-between;
   gap: 10px;
@@ -178,10 +233,11 @@ main {
 .proinfo {
   display: flex;
   box-sizing: border-box;
-  background-color: white;
+  background-color: var(--white-color);
   flex-direction: column;
   height: 100vh;
-  width: 15vh;
+  width: 50vh;
+  overflow-y: auto;
 }
 
 .proinfoA {
@@ -206,35 +262,35 @@ main {
 
 .proinfoA p {
   font-weight: lighter;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 .proinfoA button {
   margin-top: 40px;
-  background: rgba(222,235,234);
+  background: var(--third-color);
   border: none;
-  padding: 10px 30px 10px 30px;
-  color: var(--special-color);
+  padding: 10px 60px 10px 60px;
+  color: var(--text-color);
   font-weight: bold;
 }
 
 #dash {
-  background: rgba(222,235,234);
-  width: 80%;
+  width: 70%;
   height: 1px;
   align-self: center;
-  margin-top: 50px;
+  margin-top: 20px;
+  border: 1px solid var(--third-color);
 }
 
 .proinfoB {
-  margin: 50px 10px 0 20px;
+  margin: 20px 10px 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
 .proinfoB h4{
-  color: gray;
+  color: var(--gray-color);
 }
 
 .proinfoB p {
@@ -245,11 +301,12 @@ main {
 
 .hero {
   margin: 150px 50px auto 20px;
+  color: var(--text-color);
+  border: 1px solid black; 
 }
 
 .hero #persona {
   padding: 8px;
-  color: black;
   font-weight: bold;
   border: none;
 }
@@ -259,7 +316,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: rgb(222,235,254);
+  background: var(--third-color);
   margin-top: 30px;
 }
 
@@ -279,13 +336,13 @@ main {
 .hero #fbContent h3 {
   font-weight: bold;
   margin: 0;
-  color: rgb(23,43,76);
+  color: var(--h3-color);
 }
 
 .hero #fbContent a {
   text-decoration: none;
   font-weight: bold;
-  color: rgb(3,83,202);
+  color: var(--link-color);
 }
 
 .card-container {
@@ -300,7 +357,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: rgb(222,235,254);
+  background: var(--third-color);
   width: 100%;
   font-size: 17px;
 }
@@ -310,11 +367,11 @@ main {
 }
 
 #card1 {
-  background: rgb(231,252,255);
+  background: var(--card1);
 }
 
 #card2 {
-  background: rgb(171,245,208);
+  background: var(--card2);
 }
 
 
