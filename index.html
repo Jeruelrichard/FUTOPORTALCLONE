@@ -128,13 +128,49 @@
           <h4>Fees Paid </h4>
           <p>300,000 NGN</p>
         </div>
-        
+      </div>
+
+      <div class="hero2">
+        <h3>Announcements</h3>
+
+        <div class="announcard">
+          <div class="announcement-title">
+            IMPORTANT DISCLAIMER!!!
+          </div>
+          <div class="announcement-date">
+            Wed, 6th Aug 2025
+          </div>
+          <div class="announcement-prev">
+            Dear All, <br><br> FUTO does not have and has not authoriz
+          </div>
+          <button class="read-more-btn" onclick="openModal(0)">...Read More</button>
+        </div>
+
+        <div class="announcard">
+           <div class="announcement-title">
+            CANDIDATES DETAILS FOR O'LEVEL VERIFICATION 2025/2026
+           </div>
+           <div class="announcement-date">
+            Fri, 3rd Oct 2025
+           </div>
+           <div class="announcement-prev">
+            The following link has been <pre></pre>
+           </div>
+           <button class="read-more-btn" onclick="openModal(1)">...Read More</button>
+        </div>
       </div>
     </div>
 
-    <div class="her02">
-      
+    <!--Modal-->
+    <div class="modal" id="modal" onclick="closeModalOnBackdrop(event)">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">x</button>
+        <div class="modal-title" id="modalTitle"></div>
+        <div class="modal-date" id="modalDate"></div>
+        <div class="modal-body" id="modalBody"></div>
+      </div>
     </div>
+
   </main>
   <script src="script.js"></script>
   <script type="text/javascript" src="darkmode.js"></script>

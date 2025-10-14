@@ -175,6 +175,7 @@ nav svg {
 
 .partwo p {
   margin-left: 30px;
+  margin-top: 10px;;
   color: var(--special-color);
   font-size: 20px;
 }
@@ -235,7 +236,7 @@ main {
   box-sizing: border-box;
   background-color: var(--white-color);
   flex-direction: column;
-  height: 100vh;
+  height: inherit;
   width: 50vh;
   overflow-y: auto;
 }
@@ -263,6 +264,7 @@ main {
 .proinfoA p {
   font-weight: lighter;
   margin-top: -10px;
+  margin-left: 115px;
 }
 
 .proinfoA button {
@@ -283,7 +285,7 @@ main {
 }
 
 .proinfoB {
-  margin: 20px 10px 0 20px;
+  margin: 20px 10px 0 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -297,13 +299,13 @@ main {
   color: var(--special-color);
   font-weight: bold;
   margin-top: -10px;
+  margin-left: 0;
 }
 
 .hero {
   margin: 150px 50px auto 20px;
   color: var(--text-color);
-  border: 1px solid black;
-  width: 900px; 
+  width: 900px;
 }
 
 .hero #persona {
@@ -385,6 +387,147 @@ main {
   background: var(--card2);
 }
 
+.hero2 {
+  display: flex;
+  flex-direction: column;
+  background: var(--white-color);
+  margin-top: 50px;
+  border-radius: 5px;
+  border: 0.5px solid var(--gray-color);
+  overflow-y: auto;
+}
+
+.hero2 h3 {
+  margin: 10px auto 10px 20px;
+}
+
+.hero2 .announcard {
+  display: flex;
+  flex-direction: column;
+  border: 0.1px solid var(--gray-color);
+  margin-top: 0;
+}
+
+.hero2 .announcard .announcement-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 20px auto 10px 20px;
+}
+
+.hero2 .announcard .announcement-date {
+  color: var(--gray-color);
+  font-size: 0.9em;
+  margin: auto auto 10px 20px;
+}
+
+.hero2 .announcard .announcement-prev {
+  line-height: 1.6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px auto 10px 20px;
+  display: -webkit-box; 
+  -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+}
+
+.hero2 .announcard button {
+  border: none;
+  background: transparent;
+  color: var(--link-color);
+  width: 100px;
+  margin: -10px auto 20px 10px;
+}
+
+.hero2 .announcard button:hover {
+  cursor: pointer;
+}
+
+/*Modal Styles*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--text-color);
+  z-index: 1000;
+  animation: fadeIn 0.3s;
+}
+
+.model.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: var(--white-color);
+  border-radius: 5px;
+  padding: 30px;
+  max-width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  margin: 20px;
+  animation: slideUp 0.3s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--white-color);
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.modal-close:hover {
+  background: var(--hover-color);
+}
+
+.modal-title {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  padding-right: 40px;
+}
+
+.modal-date {
+  color: var(--gray-color);
+  margin-bottom: 20px;
+}
+
+.modal-body {
+  line-height: 1.8;
+  font-size: 1.05em;
+}
 
 @media (max-width: 767px) {
 .links-container {
