@@ -426,7 +426,9 @@ main {
   text-overflow: ellipsis;
   margin: 10px auto 10px 20px;
   display: -webkit-box; 
-  -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .hero2 .announcard button {
