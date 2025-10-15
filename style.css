@@ -223,12 +223,20 @@ nav svg {
   border-radius: 50%;
 }
 
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+}
+
 main {
   margin-top: 0;
-  background: var(--bg-color);
+  background: inherit;
   display: flex;
   justify-content: space-between;
   gap: 10px;
+  min-height: 100vh;
 }
 
 .proinfo {
@@ -236,7 +244,7 @@ main {
   box-sizing: border-box;
   background-color: var(--white-color);
   flex-direction: column;
-  height: inherit;
+  height: auto;
   width: 50vh;
   overflow-y: auto;
 }
@@ -529,6 +537,7 @@ main {
 .modal-body {
   line-height: 1.8;
   font-size: 1.05em;
+  color: var(--text-color);
   white-space: pre-line; /*Adds Paragraph to JS text*/
 }
 
