@@ -143,7 +143,7 @@
           <div class="announcement-prev">
             Dear All, <br><br> FUTO does not have and has not authoriz
           </div>
-          <button class="read-more-btn" onclick="openModal(0)">...Read More</button>
+          <button class="read-more-btn" onclick="openModal(0)">...Read More</button><!--Tells browser to open the modal and show announcement number 0-->
         </div>
 
         <div class="announcard">
@@ -162,6 +162,8 @@
     </div>
 
     <!--Modal-->
+    <!--.modal is the dark transparent overlay covering the entire screen
+        .modal-content is the white box that pops up in the center-->
     <div class="modal" id="modal" onclick="closeModalOnBackdrop(event)">
       <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">x</button>

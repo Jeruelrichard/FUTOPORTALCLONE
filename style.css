@@ -141,24 +141,24 @@ nav svg {
 }
 
 #overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: var(--box-shadow); /* Semi-transparent black overlay */
-      z-index: 10;
-      cursor: pointer;
-    }
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--box-shadow); /* Semi-transparent black overlay */
+  z-index: 10;
+  cursor: pointer;
+}
     
 #sidebar-active:checked ~ .links-container {
-    display: flex;
-    left: 0;
-  }
+  display: flex;
+  left: 0;
+}
   
 #sidebar-active:checked ~ #overlay {
-    display: block;
+  display: block;
 }
 
 .open-sidebar-button, .close-sidebar-button {
@@ -445,19 +445,19 @@ main {
 
 /*Modal Styles*/
 .modal {
-  display: none;
-  position: fixed;
+  display: none; /*hidden by default*/
+  position: fixed; /*stays in place even when page scrolls*/
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--text-color);
-  z-index: 1000;
+  background: var(--box-shadow); /*translucent backdrop*/
+  z-index: 1000; /*sits above everything else*/
   animation: fadeIn 0.3s;
 }
 
-.model.active {
-  display: flex;
+.modal.active {
+  display: flex; /*when modal is active, display with a flex*/
   justify-content: center;
   align-items: center;
 }
@@ -529,6 +529,7 @@ main {
 .modal-body {
   line-height: 1.8;
   font-size: 1.05em;
+  white-space: pre-line; /*Adds Paragraph to JS text*/
 }
 
 @media (max-width: 767px) {
