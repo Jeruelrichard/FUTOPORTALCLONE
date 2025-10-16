@@ -338,7 +338,7 @@ main {
   min-height: 100px;
 }
 
-.hero #fbContent h3, p, a {
+.hero #fbContent h3, #fbContent p, #fbContent a {
   margin: 0 auto auto 10px;
 }
 
@@ -377,7 +377,7 @@ main {
   border-radius: 10px;
 }
 
-.card-container .card h4, p {
+.card-container .card h4, .card-container .card p {
   margin-left: 10px;
 }
 
@@ -621,8 +621,16 @@ header .logo p{
   display: none;
 }
 
+.hero #fbContent a {
+  margin-top: 10px;
+}
+
 .card-container {
   flex-direction: column;
+}
+
+.card-container .card {
+  align-items: center;
 }
 
 .hero {
@@ -630,7 +638,7 @@ header .logo p{
 }
 
 .hero2 {
-  margin-top: 230px;
+  margin-top: 420px;
   margin-bottom: 50px;
 }
 }
