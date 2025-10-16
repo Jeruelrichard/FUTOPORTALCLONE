@@ -49,7 +49,6 @@ header .logo {
 
 header .logo img {
   height: 45px;
-  width: auto;
   margin: 10px 0 10px 0;
 }
 
@@ -542,24 +541,15 @@ main {
   white-space: pre-line; /*Adds Paragraph to JS text*/
 }
 
-@media (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
 .links-container {
   display: none;
   flex-direction: column;
   align-items: flex-start;
   text-align: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100vh;
-  background-color: white;
-  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.25);
-}
-
-.nav-logo {
-  display: flex;
-  justify-content: space-evenly;
+  width: 100vw;
+  overflow-y: auto;
 }
 
 .nav-logo svg{
@@ -569,14 +559,11 @@ main {
 
 .nav-logo img{
   height: 80px;
-  margin: 10px 0 0 0 ;
 }
 
 .nav-logo p {
-  color: var(--special-color);
   margin: -10px 0 0 5px;
   font-size: 100%;
-  font-weight: bold;
   text-align: left;
   align-content: center;
   width: 200px;
@@ -584,35 +571,36 @@ main {
 }
   
 #mod {
-  color: var(--special-color);
   margin: 20px 0 10px 20px;
 }
 
 .nav-items a {
-  width: 40%;
   margin: 25px 10px 0 30px;
-  padding: 12px;
   font-size: 12px;
   justify-content: flex-start;
 }
       
 .open-sidebar-button, .close-sidebar-button {
-    padding: 20px;
-    display: block;
-  }
+  padding: 20px;
+  display: block;
+}
   
 #sidebar-active:checked ~ .links-container {
-    display: flex;
-    left: 0;
-  }
+  display: flex;
+  left: 0;
+}
   
 #sidebar-active:checked ~ #overlay {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+header .logo {
+  margin-left: 0;
 }
 
 header .logo p{
@@ -623,7 +611,26 @@ header .logo p{
 }
 
 .partwo p {
-  font-size: 13px;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 17px;
   align-self: center;
+}
+
+.proinfo {
+  display: none;
+}
+
+.card-container {
+  flex-direction: column;
+}
+
+.hero {
+  margin: 120px 20px auto 20px;
+}
+
+.hero2 {
+  margin-top: 230px;
+  margin-bottom: 50px;
 }
 }
