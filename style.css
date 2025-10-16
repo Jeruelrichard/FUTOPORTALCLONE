@@ -243,9 +243,12 @@ main {
   box-sizing: border-box;
   background-color: var(--white-color);
   flex-direction: column;
-  height: auto;
   width: 50vh;
   overflow-y: auto;
+}
+
+.proinfo .close-btn {
+  display: none;
 }
 
 .proinfoA {
@@ -271,7 +274,7 @@ main {
 .proinfoA p {
   font-weight: lighter;
   margin-top: -10px;
-  margin-left: 115px;
+  margin-left: 0;
 }
 
 .proinfoA button {
@@ -506,6 +509,7 @@ main {
   top: 15px;
   right: 15px;
   background: var(--white-color);
+  color: var(--text-color);
   border: none;
   width: 35px;
   height: 35px;
@@ -619,6 +623,48 @@ header .logo p{
 
 .proinfo {
   display: none;
+  position: fixed;
+  inset: 0; /*covers the entire screen*/
+  z-index: 999;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.proinfoA p {
+  margin-left: 0;
+}
+
+.proinfo.show {
+  display: flex;
+  box-sizing: border-box;
+  background-color: var(--white-color);
+  flex-direction: column;
+  width: auto;
+  overflow-y: auto;
+  opacity: 1;
+}
+
+.proinfo .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  color: var(--special-color);
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  padding: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: var(--hover-color);
 }
 
 .hero #fbContent a {

@@ -1,3 +1,21 @@
+//Logic for personal details showing at a button's click only on mobile view
+const personaBtn = document.getElementById("persona");
+const personaDetails = document.querySelector(".proinfo");
+
+//Close Button
+personaBtn.addEventListener("click", () => {
+    if (window.innerWidth <= 767) {
+        personaDetails.classList.toggle("show");
+    }
+});
+
+function closeBtn() {
+    document.querySelector(".proinfo").classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
+
+
+
 //Storing Announcements as an Array of Objects
 const announcements = [{
     title: "IMPORTANT DISCLAIMER!!!",
