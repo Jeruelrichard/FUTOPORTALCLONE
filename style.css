@@ -366,7 +366,7 @@ main {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
-  height: 170px;
+  min-height: 170px; /*Added New, Delete if not working fine*/
   gap: 20px;
 }
 
@@ -376,6 +376,7 @@ main {
   justify-content: space-around;
   background: var(--third-color);
   width: 100%;
+  min-height: auto; /*Added New, Delete if not working fine*/
   font-size: 17px;
   border-radius: 10px;
 }
@@ -673,10 +674,15 @@ header .logo p{
 
 .card-container {
   flex-direction: column;
+  border: 1px solid black;
 }
 
 .card-container .card {
   align-items: center;
+}
+
+.card-container .card h4, .card-container .card p {
+  margin-left: 0;
 }
 
 .hero {
@@ -684,7 +690,7 @@ header .logo p{
 }
 
 .hero2 {
-  margin-top: 420px;
+  margin-top: 40px; /*Changed from 420px to 40px*/
   margin-bottom: 50px;
 }
 }
