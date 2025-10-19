@@ -144,8 +144,8 @@ nav svg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   background-color: var(--box-shadow); /* Semi-transparent black overlay */
   z-index: 10;
   cursor: pointer;
@@ -609,7 +609,7 @@ header .logo {
 }
 
 header .logo p{
-  font-size: 10px;
+  font-size: 12px;
   align-self: center;
   width: 120px;
   margin-bottom: 10px;
@@ -618,7 +618,7 @@ header .logo p{
 .partwo p {
   margin-left: 20px;
   margin-top: 15px;
-  font-size: 17px;
+  font-size: 15px;
   align-self: center;
 }
 
@@ -678,7 +678,6 @@ header .logo p{
 
 .card-container {
   flex-direction: column;
-  border: 1px solid black;
 }
 
 .card-container .card {
